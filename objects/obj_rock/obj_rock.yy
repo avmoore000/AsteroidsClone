@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rock_big",
-    "path":"sprites/spr_rock_big/spr_rock_big.yy",
+    "name":"Asteroid1",
+    "path":"sprites/Asteroid1/Asteroid1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

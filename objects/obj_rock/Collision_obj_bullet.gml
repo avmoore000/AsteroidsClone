@@ -13,12 +13,14 @@ if sprite_index == spr_rock_big
 }
 else if instance_number(obj_rock) < 12
 {
-	sprite_index = spr_rock_big;
+	sprite_index = spr_asteroid1;
 	x = -100;
 }
 else
 {
 	instance_destroy();
 }
+
+
 
 obj_game.points += 50;

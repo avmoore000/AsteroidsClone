@@ -22,9 +22,13 @@
     {"name":"rm_titleScreen","order":1,"path":"rooms/rm_titleScreen/rm_titleScreen.yy",},
     {"name":"bckgrnd_titleScreen","order":5,"path":"sprites/bckgrnd_titleScreen/bckgrnd_titleScreen.yy",},
     {"name":"spr_asteroid1","order":4,"path":"sprites/spr_asteroid1/spr_asteroid1.yy",},
+    {"name":"spr_asteroid1FragType1","order":7,"path":"sprites/spr_asteroid1FragType1/spr_asteroid1FragType1.yy",},
+    {"name":"spr_asteroid1FragType2","order":8,"path":"sprites/spr_asteroid1FragType2/spr_asteroid1FragType2.yy",},
+    {"name":"spr_asteroid1FragType3","order":9,"path":"sprites/spr_asteroid1FragType3/spr_asteroid1FragType3.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
     {"name":"spr_rock_big","order":2,"path":"sprites/spr_rock_big/spr_rock_big.yy",},
     {"name":"spr_rock_small","order":3,"path":"sprites/spr_rock_small/spr_rock_small.yy",},
     {"name":"spr_startButton","order":6,"path":"sprites/spr_startButton/spr_startButton.yy",},
+    {"name":"spr_asteroid1FragType4","order":10,"path":"sprites/spr_asteroid1FragType4/spr_asteroid1FragType4.yy",},
   ],
 }

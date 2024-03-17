@@ -2,13 +2,18 @@
 // You can write your code in this editor
 
 instance_destroy(other);
-effect_create_above(ef_explosion, x, y, 1, c_white);
+effect_create_above(ef_explosion, x, y, 1, c_green);
 
 direction = random(360);
 
-if sprite_index == spr_rock_big
+
+
+if sprite_index == spr_asteroid1
 {
-	sprite_index = spr_rock_small;
+	asteroidIndex = random_range(0,3);
+	sprite_index = spriteArray[asteroidIndex];
+	amSmall = true;
+	
 	instance_copy(true);
 }
 else if instance_number(obj_rock) < 12
@@ -20,5 +25,3 @@ else
 {
 	instance_destroy();
 }
-
-obj_game.points += 50;

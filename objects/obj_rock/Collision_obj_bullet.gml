@@ -21,6 +21,4 @@ else
 	instance_destroy();
 }
 
-
-
 obj_game.points += 50;

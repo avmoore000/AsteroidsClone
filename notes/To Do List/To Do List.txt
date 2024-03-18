@@ -1,5 +1,6 @@
 - Create Game Over Screen
 - Update graphics for score keeping to be more detailed
+- Add lives display
 - Create credits screen
 - Add sound effect for weapons fire
 - Add sound effect for asteroid explosions

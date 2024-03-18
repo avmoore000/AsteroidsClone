@@ -1,0 +1,1 @@
+audio_play_sound(snd_titleScreen, 1, true);

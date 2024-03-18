@@ -1,4 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Restart Level and End Game
 
-room_restart();
+
+if gameOver == false
+{
+    room_restart();
+}
+else
+{
+	room_goto(rm_gameOver);
+}

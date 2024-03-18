@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-speed = 1;
+speed = irandom(5);
 direction = random(360);
 image_angle = random(360);
 

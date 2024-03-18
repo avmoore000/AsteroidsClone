@@ -1,5 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialize Game Controller Variables
 
 points = 0;
+gameOver = false;
 roomStart = true;
+lives = 3;

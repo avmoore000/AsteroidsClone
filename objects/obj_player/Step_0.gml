@@ -30,5 +30,6 @@ move_wrap(true, true, 0);
 
 if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
 {
+	//audio_play_sound(snd_weaponsFire, 1, false);
 	instance_create_layer(x, y, "Instances", obj_bullet);
 }

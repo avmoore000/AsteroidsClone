@@ -3,6 +3,6 @@
 - Implement high score display
 - Add lives display --------------------------------------------------------> 3/18/2024 AVM
 - Create credits screen
-- Add sound effect for weapons fire
-- Add sound effect for asteroid explosions
-- Add sound effect for space craft movement
+- Add sound effect for weapons fire ----------------------------------------> 3/18/2024 AVM
+- Add music for game over --------------------------------------------------> 3/18/2024 AVM
+- Add sound effect for player death ----------------------------------------> 3/18/2024 AVM 

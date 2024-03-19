@@ -1,6 +1,6 @@
 /// @description Set up the HUD
 
-if room !=  rm_titleScreen
+if room !=  rm_titleScreen and room != rm_gameOver
 {
 	draw_set_font(fnt_Impact);
 	draw_set_color(c_yellow);

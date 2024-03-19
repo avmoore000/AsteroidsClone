@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 instance_destroy(other);
+//
 //audio_play_sound(snd_bulletCollision, 1, false);
 effect_create_above(ef_explosion, x, y, 1, c_orange);
 

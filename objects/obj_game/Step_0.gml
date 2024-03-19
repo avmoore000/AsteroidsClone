@@ -15,6 +15,7 @@ else if room == rm_gameOver
 		room_goto(rm_titleScreen);
 		gameOver = false;
 		points = 0;
+		roomStart = true;
 		lives = 3;
 	}
 }

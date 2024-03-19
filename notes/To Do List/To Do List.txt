@@ -1,8 +1,8 @@
 - Create Game Over Screen   ------------------------------------------------> 3/18/2024 AVM
 - Update graphics for score keeping to be more detailed --------------------> 3/18/2024 AVM
-- Implement high score display
+- Implement high score display ---------------------------------------------> 3/19/2024 AVM
 - Add lives display --------------------------------------------------------> 3/18/2024 AVM
-- Create credits screen
+- Create credits screen ----------------------------------------------------> 3/19/2024 AVM
 - Add sound effect for weapons fire ----------------------------------------> 3/18/2024 AVM
 - Add music for game over --------------------------------------------------> 3/18/2024 AVM
 - Add sound effect for player death ----------------------------------------> 3/18/2024 AVM 

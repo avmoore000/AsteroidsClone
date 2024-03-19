@@ -5,5 +5,6 @@ gameOver = false;
 roomStart = true;
 spawn = false;
 lives = 3;
+name = "Test";
 
 

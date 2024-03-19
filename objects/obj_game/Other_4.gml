@@ -1,11 +1,14 @@
 /// @description Control audio for levels
 // You can write your code in this editor
 
-//audio_stop_all();
-
 if room == rm_titleScreen
 {
 	audio_play_sound(snd_titleScreen, 1, true);
+	alarm[0] = 1500;
+}
+else if room == rm_highScores
+{
+	alarm[0] = 1500;
 }
 else if room == rm_levelOne and roomStart == true
 {

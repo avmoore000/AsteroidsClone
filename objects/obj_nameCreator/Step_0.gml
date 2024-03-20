@@ -1,54 +1,85 @@
-/// @description Insert description here
-// You can write your code in this editor
 
 #region Move the Cursor
 
-	if PL == true
+	if !buttonReady
 	{
-		if (gridX - 1) < 0
+		if HL || HR || HU || HD
 		{
-			gridX = xLetters - 1;
+			buttonTimer++;
 		}
-		else
+		
+		if buttonTimer >= TimeTilButtonReady
 		{
-			gridX--;
+			buttonTimer = 0;
+			buttonReady = true;
+		}
+		
+		if PR || PL || PU || PD
+		{
+			buttonTimer = 0;
+			buttonReady = true;
 		}
 	}
 	
-	if PR == true
+	
+	
+	if RL || RR || RU || RD
 	{
-		if (gridX + 1) >= xLetters
-		{
-			gridX = 0;
-		}
-		else
-		{
-			gridX++;
-		}
+		buttonTimer = 0;
+		buttonReady = false;
 	}
 	
-	if PU = true
+	if buttonReady
 	{
-		if (gridY - 1) < 0
+		if PL || HL
 		{
-			gridY = yLetters - 1;
+			if (gridX - 1) < 0
+			{
+				gridX = xLetters - 1;
+			}
+			else
+			{
+				gridX--;
+			}
 		}
-		else
-		{
-			gridY--;
-		}
-	}
 	
-	if PD = true
-	{
-		if (gridY + 1) >= yLetters
+		if PR || HR
 		{
-			gridY = 0;
+			if (gridX + 1) >= xLetters
+			{
+				gridX = 0;
+			}
+			else
+			{
+				gridX++;
+			}
 		}
-		else
+	
+		if PU || HU
 		{
-			gridY++;
+			if (gridY - 1) < 0
+			{
+				gridY = yLetters - 1;
+			}
+			else
+			{
+				gridY--;
+			}
 		}
+	
+		if PD || HD
+		{
+			if (gridY + 1) >= yLetters
+			{
+				gridY = 0;
+			}
+			else
+			{
+				gridY++;
+			}
+		}
+		
+		buttonReady = false;
 	}
 
 #endregion
@@ -61,24 +92,31 @@
 		
 		if newLetter == "OK"
 		{
-			//characterToName.name = currentName;
 			obj_game.name = currentName;
-			
-			obj_game.nameCreation = false;
-			obj_game.nameSelected = true;
+		
+			audio_play_sound(snd_characterCreated, 1, false);
+			alarm[0] = 60;
 		}
 		
 		letterCount = string_length(currentName);
 	
-		if newLetter != "OK" and letterCount < MAX_LETTERS_IN_NAME
+		if (letterCount < MAX_LETTERS_IN_NAME)
 		{
-			if showLowerCase and newLetter != " "
+			if newLetter != "OK"
 			{
-				unicode = ord(newLetter) + 32;
-				newLetter = chr(unicode);
-			}
+				if showLowerCase and newLetter != " "
+				{
+					unicode = ord(newLetter) + 32;
+					newLetter = chr(unicode);
+				}
 			
-			currentName += newLetter;
+				currentName += newLetter;
+				audio_play_sound(snd_letterSelect, 1, false);
+			}
+		}
+		else
+		{
+			audio_play_sound(snd_deleteLetter, 1, false);
 		}
 	}
 
@@ -94,6 +132,8 @@
 		{
 			currentName = string_delete(currentName, letterCount, 1);
 		}
+		
+		audio_play_sound(snd_deleteLetter, 1, false);
 	}
 
 #endregion
@@ -102,6 +142,7 @@
 
 	if PSEL
 	{
+		audio_play_sound(snd_shiftKey, 1, false);
 		showLowerCase = !showLowerCase;
 	}
 

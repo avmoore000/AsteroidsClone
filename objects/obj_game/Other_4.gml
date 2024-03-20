@@ -1,5 +1,4 @@
-/// @description Control audio for levels
-// You can write your code in this editor
+/// @description Room Creation Events
 
 if room == rm_titleScreen
 {
@@ -17,10 +16,13 @@ else if room == rm_levelOne and roomStart == true
 	audio_play_sound(snd_levelOneMusic, 1, true);
 	roomStart = false;
 	alarm[1] = 20;
+	gameOver = false;
+	paused = false;
 	
-	life[0] = instance_create_layer(928, 64, "Instances", obj_lifeDisplay);
-	life[1] = instance_create_layer(864, 64, "Instances", obj_lifeDisplay);
-	life[2] = instance_create_layer(800, 64, "Instances", obj_lifeDisplay);
+	for (var xx = 0; xx < currentLives; xx++)
+	{
+		life[xx] = instance_create_layer(928 - (64 * xx),64, "Instances", obj_lifeDisplay);
+	}
 }
 
 else if room == rm_gameOver and roomStart == true
@@ -28,5 +30,6 @@ else if room == rm_gameOver and roomStart == true
 	audio_stop_all();
 	audio_play_sound(snd_gameOverScreen, 1, true);
 	roomStart = false;
+	currentLives = maxLives;
 	highscore_add(name, points);
 }

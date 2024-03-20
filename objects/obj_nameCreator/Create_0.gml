@@ -9,8 +9,22 @@
 	POK = false;    // OK Key Pressed
 	PDEL = false;    // Delete Key Pressed
 	PSEL = false;    // Select Key Pressed
+	
+	HL = false;		// Left Key Held Down
+	HR = false;		// Right Key Held Down
+	HU = false;     // UP Key Held Down
+	HD = false;		// Down Key Held Down
+	
+	RL = false;		// Left Key Release
+	RR = false;		// Right Key Released
+	RU = false;		// Up Key Released
+	RD = false;		// Down Key Released
 
 #endregion
+
+buttonReady = false;  // Ready for the cursor to move to next letter or not
+buttonTimer = 0;      // Times how many steps button has been held for
+TimeTilButtonReady = 10;   // How many steps the player must wait for the button to be ready
 
 showLowerCase = false;
 currentName = "Hero";

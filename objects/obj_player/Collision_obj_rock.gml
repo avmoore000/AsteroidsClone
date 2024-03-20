@@ -13,21 +13,6 @@ if obj_game.currentLives < 0
 	obj_game.gameOver = true;
 	obj_game.roomStart = true;
 }
-else
-{
-	if obj_game.currentLives == 2
-	{
-		instance_destroy(obj_game.life[2]);
-	}
-	else if obj_game.currentLives == 1
-	{
-		instance_destroy(obj_game.life[1]);
-	}
-	else
-	{
-		instance_destroy(obj_game.life[0]);
-	}
-}
 	
 obj_game.alarm[0] = 200;
 instance_destroy();

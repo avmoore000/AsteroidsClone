@@ -8,6 +8,7 @@ nameCreation = false;
 nameSelected = false;
 paused = false;
 currentLives = 3;
+maxLives = 3;
 life = [];
 name = "Hero";
 alarm[2] = 300;

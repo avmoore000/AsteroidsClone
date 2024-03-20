@@ -1,3 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Move from Splash Screen to Title
+
 room_goto(rm_titleScreen);

@@ -35,12 +35,6 @@ if room != rm_nameSelect
 		PFIRE = false;
 	}
 	
-	if PSHIFT
-	{
-		audio_play_sound(snd_weaponsFire, 1, false);
-		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
-	}
-
 	move_wrap(true, true, 0);
 
 }

@@ -1,10 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Draw Background
-//var back_id = layer_background_get_id("Backgrounds_1");
-//layer_background_sprite(back_id, bckgrnd_nameSelectScreen);
-//layer_background_alpha(back_id, 1);
+/// @description Draw the GUI for the Name Creation Screen
 
 draw_set_font(fnt_characterSelect);
 fontSize = font_get_size(fnt_characterSelect);

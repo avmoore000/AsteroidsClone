@@ -5,43 +5,46 @@ if room != rm_nameSelect
 {
 	if audio_is_playing(snd_playerDeath)
 	{
-		obj_game.gamePaused = true;
+		obj_game.paused = true;
 	}
 	
-	if keyboard_check(vk_up)
+	if PL
+	{
+		image_angle += 4;
+	}
+	
+	if PR
+	{
+		image_angle -= 4;
+	}
+	
+	if PU
 	{
 		motion_add(image_angle, 0.1);
 	}
 
-	if keyboard_check(vk_down)
+	if PD
 	{
 		motion_add(image_angle, -0.1);
 	}
-
-	if keyboard_check(vk_left)
+	
+	if PFIRE
 	{
-		image_angle += 4;
+		audio_play_sound(snd_weaponsFire, 1, false);
+		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
+		PFIRE = false;
 	}
-
-	if keyboard_check(vk_right)
-	{	
-		image_angle -= 4;
-	}
-
-	if keyboard_check(vk_right)
+	
+	if PSHIFT
 	{
-		image_angle -= 4;
+		audio_play_sound(snd_weaponsFire, 1, false);
+		instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_bullet);
 	}
 
 	move_wrap(true, true, 0);
 
-	if mouse_check_button_pressed(mb_left) or keyboard_check_pressed(vk_space)
-	{
-		audio_play_sound(snd_weaponsFire, 1, false);
-		instance_create_layer(x, y, "Instances", obj_bullet);
-	}
 }
-else
+else  // Rotate sprite in name select screen
 {
 	image_angle += 1;
 }

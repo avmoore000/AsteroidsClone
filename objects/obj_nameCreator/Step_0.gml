@@ -66,7 +66,6 @@
 			
 			obj_game.nameCreation = false;
 			obj_game.nameSelected = true;
-			instance_destroy();
 		}
 		
 		letterCount = string_length(currentName);

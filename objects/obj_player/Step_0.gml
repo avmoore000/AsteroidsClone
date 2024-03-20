@@ -3,6 +3,11 @@
 
 if room != rm_nameSelect
 {
+	if audio_is_playing(snd_playerDeath)
+	{
+		obj_game.gamePaused = true;
+	}
+	
 	if keyboard_check(vk_up)
 	{
 		motion_add(image_angle, 0.1);

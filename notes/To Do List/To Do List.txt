@@ -6,3 +6,4 @@
 - Add sound effect for weapons fire ----------------------------------------> 3/18/2024 AVM
 - Add music for game over --------------------------------------------------> 3/18/2024 AVM
 - Add sound effect for player death ----------------------------------------> 3/18/2024 AVM 
+- Create a Better Cursor for the Name Select Screen ------------------------> 3/19/2024 AVM

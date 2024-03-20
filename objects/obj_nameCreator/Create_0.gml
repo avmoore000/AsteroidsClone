@@ -15,6 +15,7 @@
 showLowerCase = false;
 currentName = "Hero";
 characterToName = 0;
+obj_game.nameCreation = true;
 
 #macro MAX_LETTERS_IN_NAME 16
 

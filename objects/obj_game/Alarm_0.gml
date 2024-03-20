@@ -18,12 +18,14 @@ else if room != rm_nameSelect
 	{
 		room_restart();
 		audio_resume_all();
+		paused = false;
 		
+		/*
 		// Respawn the player after death
 		if !instance_exists(obj_player)
 		{
 			instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_player);
-		}
+		}*/
 		
 		alarm[1] = 120;
 	}	

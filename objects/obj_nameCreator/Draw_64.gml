@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 // Draw Background
-var back_id = layer_background_get_id("Backgrounds_1");
-layer_background_sprite(back_id, bckgrnd_nameSelectScreen);
-layer_background_alpha(back_id, 1);
+//var back_id = layer_background_get_id("Backgrounds_1");
+//layer_background_sprite(back_id, bckgrnd_nameSelectScreen);
+//layer_background_alpha(back_id, 1);
 
 draw_set_font(fnt_characterSelect);
 fontSize = font_get_size(fnt_characterSelect);
@@ -77,7 +77,7 @@ for (var yy = 0; yy < yLetters; yy++)
 		draw_set_valign(fa_top);
 		draw_text(drawX, drawY, letter);
 		
-		if (xx == gridX && yy == gridY) draw_sprite(spr_pointer, 0, drawX, drawY);
+		if (xx == gridX && yy == gridY) draw_sprite(spr_pointer, 0, drawX, drawY + BUFFER);
 		
 		charCount++;
 	}

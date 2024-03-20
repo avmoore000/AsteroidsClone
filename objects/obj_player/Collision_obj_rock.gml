@@ -5,8 +5,8 @@
 effect_create_above(ef_firework, x, y, 1, c_purple);
 audio_pause_all();
 audio_play_sound(snd_playerDeath, 1, false);
-instance_destroy();
 obj_game.currentLives--;
+obj_game.paused = true;
 	
 if obj_game.currentLives < 0
 {
@@ -30,3 +30,4 @@ else
 }
 	
 obj_game.alarm[0] = 200;
+instance_destroy();

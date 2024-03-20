@@ -61,7 +61,7 @@
 		
 		if newLetter == "OK"
 		{
-			characterToName.name = currentName;
+			//characterToName.name = currentName;
 			obj_game.name = currentName;
 			
 			obj_game.nameCreation = false;

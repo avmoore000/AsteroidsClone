@@ -5,6 +5,19 @@ if room == rm_titleScreen
 	if keyboard_check_released(vk_space)
 	{
 		room_goto(rm_nameSelect);
+		nameSelected = false;
+	}
+}
+
+else if room == rm_levelOne
+{
+	if !instance_exists(obj_player) and gameStarted
+	{
+		if mouse_check_button_pressed(mb_left) and !paused
+		{
+			
+			instance_create_layer(mouse_x, mouse_y, "Instances", obj_player);
+		}
 	}
 }
 
@@ -80,9 +93,11 @@ else if room == rm_nameSelect
 		if nameSelected
 		{
 			room_goto(rm_levelOne);
+			gameStarted = true;
+			instance_destroy(obj_player);
 		}
 		
-		if keyboard_check_pressed(vk_space) and !instance_exists(obj_nameCreator)
+		/*if keyboard_check_pressed(vk_space) and !instance_exists(obj_nameCreator)
 		{
 			instance_create_depth(0, 0, depth - 50, obj_nameCreator);
 			obj_player.x = 126;
@@ -90,7 +105,7 @@ else if room == rm_nameSelect
 			obj_nameCreator.characterToName = obj_player.id;
 			obj_nameCreator.currentName = obj_player.name;
 			nameCreation = true;
-		}
+		}*/
 	}
 }
 
@@ -105,14 +120,13 @@ else if room == rm_highScores
 
 else if room == rm_gameOver
 {
-	
-
 	if keyboard_check_released(vk_space)
 	{
 		room_goto(rm_titleScreen);
 		gameOver = false;
 		points = 0;
 		roomStart = true;
-		lives = 3;
+		currentLives = 3;
+		paused = false;
 	}
 }

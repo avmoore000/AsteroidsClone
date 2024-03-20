@@ -6,6 +6,7 @@ roomStart = true;
 spawn = false;
 nameCreation = false;
 nameSelected = false;
+paused = false;
 currentLives = 3;
 life = [];
 name = "Hero";

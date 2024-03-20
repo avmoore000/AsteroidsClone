@@ -11,6 +11,13 @@ if room !=  rm_titleScreen and room != rm_gameOver and room != rm_highScores and
 	
 	draw_set_color(c_yellow);
 	draw_text(700, 20, "Lives:  ");
+	
+	if !instance_exists(obj_player) and !gameOver and !paused
+	{
+		draw_set_color(c_white);
+		draw_set_font(fnt_Impact);
+		draw_text(room_width / 2, room_height / 2, "Select Starting Point with Left Mouse");
+	}
 }
 
 else if room == rm_highScores
